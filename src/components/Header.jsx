@@ -10,9 +10,9 @@ import { PopoverBody } from "react-bootstrap";
 const Header = () => {
   return (
     <div className="bg-white h-18 px-8 py-4 flex justify-between ">
-      <div className="relative">
+      <div className="relative pt-3">
         <BiSearch
-          className="left-2 absolute text-gray-400 top-1/2 -translate-y-1/2"
+          className="left-2 absolute text-gray-400 bottom-3 -translate-y-1/3"
           size={20}
         />
         <input
@@ -25,7 +25,7 @@ const Header = () => {
         <Popover className="relative">
           {({ open }) => (
             <>
-              <Popover.Button className="">
+              <Popover.Button className="p-2">
                 {/* <span className="mr-2">Messages</span> */}
                 <BsChatLeft size={20} />
               </Popover.Button>
@@ -65,7 +65,7 @@ const Header = () => {
         <Popover className="relative">
           {({ open }) => (
             <>
-              <Popover.Button className="">
+              <Popover.Button className="p-2">
                 {/* <span className="mr-2">Messages</span> */}
                 <BsBell size={20} />
               </Popover.Button>
@@ -102,7 +102,19 @@ const Header = () => {
             </>
           )}
         </Popover>
-        <Menu></Menu>
+        <Menu as="div" className="relative">
+          <Menu.Button className="inline-flex ">
+            <div
+              className="h-10 w-10 rounded-full bg-sky-500 bg-cover bg-no-repeat bg-center "
+              style={{
+                backgroundImage:
+                  'url("https://source.unsplash.com/80x80?face")',
+              }}
+            >
+              <span className="sr-only">Bruno</span>
+            </div>
+          </Menu.Button>
+        </Menu>
       </div>
     </div>
   );
