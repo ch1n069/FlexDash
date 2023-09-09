@@ -1,7 +1,10 @@
 import React from "react";
 // import { IoLogoDesignernews } from "react-icons";
 import { DiCodeigniter } from "react-icons/di";
-import { DASHBOARD_SIDEBAR_LINKS } from "../lib/consts/navigation";
+import {
+  DASHBOARD_SIDEBAR_BOTTOM_LINKS,
+  DASHBOARD_SIDEBAR_LINKS,
+} from "../lib/consts/navigation";
 import NavLink from "../components/NavLink";
 const SideBar = () => {
   return (
@@ -16,7 +19,11 @@ const SideBar = () => {
           return <NavLink key={item.key} item={item} />;
         })}
       </div>
-      <div className="">Bottom part</div>
+      <div className="">
+        {DASHBOARD_SIDEBAR_BOTTOM_LINKS.map((item) => {
+          return <NavLink key={item.key} item={item} />;
+        })}
+      </div>
     </div>
   );
 };
