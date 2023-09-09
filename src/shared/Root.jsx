@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import DashBoard from "./DashBoard";
 import SideBar from "./SideBar";
+import { DASHBOARD_SIDEBAR_LINKS } from "../lib/consts/navigation";
+import NavLink from "../components/NavLink";
 
 const Root = () => {
   return (
@@ -9,6 +11,7 @@ const Root = () => {
       <Fragment>
         <SideBar />
         {/* <DashBoard /> */}
+
         <Outlet />
       </Fragment>
     </div>
