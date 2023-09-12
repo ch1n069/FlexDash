@@ -9,7 +9,7 @@ const Home = () => {
       <DashBoardStats />
       <div className="flex flex-grow w-full g-4 ">
         <Chart />
-        {/* <BuyerProfilePieChart /> */}
+        <BuyerProfilePieChart />
       </div>
     </div>
   );

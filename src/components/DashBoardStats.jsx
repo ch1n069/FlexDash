@@ -1,5 +1,8 @@
 import React from "react";
 import { BsBag } from "react-icons/bs";
+import { TbTruckDelivery } from "react-icons/tb";
+import { AiOutlineArrowUp } from "react-icons/ai";
+
 import { GrTransaction } from "react-icons/gr";
 
 const DashBoardStats = () => {
@@ -25,19 +28,17 @@ const DashBoardStats = () => {
       </BoxWrapper>
       <BoxWrapper>
         {/* will hold the icon */}
-        <div className="rounded-full h-12 w-12 flex items-center justify-center bg-sky-400">
-          <BsBag
+        <div className="rounded-full h-12 w-12 flex items-center justify-center bg-purple-400">
+          <TbTruckDelivery
             // siz={24}
             className="text-2xl text-white items-center"
           />
         </div>
         <div className="pl-4">
-          <span className="text-sm text-gray-500 font-light">Total sales</span>
+          <span className="text-sm text-gray-500 font-light">Orders</span>
           <div className="">
-            <strong className="text-xl text-gray-900 font-semibold">
-              $500.60
-            </strong>
-            <span className="text-green-500 text-sm pl-2">+234</span>
+            <strong className="text-xl text-gray-900 font-semibold">150</strong>
+            <span className="text-red-600 text-sm pl-2"> -50</span>
           </div>
         </div>
       </BoxWrapper>
