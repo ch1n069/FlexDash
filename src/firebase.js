@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDc46EM34nAhUUEuzGruKyvnRdlbIn6C4k",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "flex-dash.firebaseapp.com",
   projectId: "flex-dash",
   storageBucket: "flex-dash.appspot.com",
-  messagingSenderId: "503696292808",
-  appId: "1:503696292808:web:36dd3b918a2ac04200defd",
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSENGER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
